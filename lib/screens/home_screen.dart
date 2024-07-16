@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'dart:ui';
 
@@ -56,6 +56,30 @@ class HomeScreen extends StatelessWidget {
                 filter: ImageFilter.blur(sigmaX: 100.0, sigmaY: 100.0),
                 child: Container(
                   decoration: BoxDecoration(color: Colors.transparent),
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      ' 📍 Aix-en-provence',
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.w300),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Good Morning',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
                 ),
               )
             ],
